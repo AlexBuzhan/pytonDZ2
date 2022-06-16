@@ -10,31 +10,32 @@ no = 'n'
 while more == yes:
     r_answer = 0
     n_answer = 0
-    year_of_birth1 = int(input('В каком году родился А. С. Пушкин? - '))
-    year_of_birth2 = int(input('В каком году родился Эйштейн? - '))
-    year_of_birth3 = int(input('В каком году родился Ньютон? - '))
-    year_of_birth4 = int(input('В каком году родился Дали? - '))
-    year_of_birth5 = int(input('В каком году родился Леонардо да Винчи? - '))
-    if year_of_birth1 == 1799:
+    YEAR_OF_BIRTH_PUSHKIN = int(input('В каком году родился А. С. Пушкин? - '))
+    YEAR_OF_BIRTH_EISHTEIN = int(input('В каком году родился Эйштейн? - '))
+    YEAR_OF_BIRTH_NUTON = int(input('В каком году родился Ньютон? - '))
+    YEAR_OF_BIRTH_DALI = int(input('В каком году родился Дали? - '))
+    YEAR_OF_BIRTH_LEO = int(input('В каком году родился Леонардо да Винчи? - '))
+    if YEAR_OF_BIRTH_PUSHKIN == 1799:
         r_answer = r_answer + 1
     else: n_answer = n_answer + 1
-    if year_of_birth2 == 1879:
+    if YEAR_OF_BIRTH_EISHTEIN == 1879:
         r_answer = r_answer + 1
     else: n_answer = n_answer + 1
-    if year_of_birth3 == 1643:
+    if YEAR_OF_BIRTH_NUTON == 1643:
         r_answer = r_answer + 1
     else: n_answer = n_answer + 1
-    if year_of_birth4 == 1904:
+    if YEAR_OF_BIRTH_DALI == 1904:
         r_answer = r_answer + 1
     else: n_answer = n_answer + 1
-    if year_of_birth5 == 1452:
+    if YEAR_OF_BIRTH_LEO == 1452:
         r_answer = r_answer + 1
     else: n_answer = n_answer + 1
     print('Правильных ответов', r_answer)
     print('Не правильных ответов', n_answer)
-    r_answer100 = ((r_answer * 100) / 5)
-    n_answer100 = ((n_answer * 100) / 5)
-    print('Процент правильных ответов', r_answer100)
-    print('Процент правильных ответов', n_answer100)
-    more = input('Хотите сыграть сначала? ')
+    questions = 5
+    r_answer_proc = ((r_answer * 100) / questions)
+    n_answer_proc = ((n_answer * 100) / questions)
+    print('Процент правильных ответов', r_answer_proc)
+    print('Процент правильных ответов', n_answer_proc)
+    more = input('Хотите сыграть сначала? (y/n) ')
 else: print('Конец игры')
